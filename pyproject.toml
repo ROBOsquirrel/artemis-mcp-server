@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "artemis-mcp-server"
+version = "0.1.0"
+description = "Read-only Model Context Protocol (MCP) server for AresValley Artemis signal-reference databases."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "RF-AI-Controller contributors" }]
+keywords = ["mcp", "artemis", "sdr", "rf", "signal-identification", "spectrum"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Communications :: Ham Radio",
+    "Topic :: Scientific/Engineering",
+]
+dependencies = ["mcp>=1.2,<2"]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+artemis-mcp = "artemis_mcp.server:main"
+
+[project.urls]
+Homepage = "https://github.com/your-org/artemis-mcp-server"
+Issues = "https://github.com/your-org/artemis-mcp-server/issues"
+
+[tool.setuptools]
+py-modules = ["run_artemis_mcp", "artemis_mcp_client"]
+
+[tool.setuptools.packages.find]
+include = ["artemis_mcp*"]

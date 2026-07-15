@@ -1,0 +1,11 @@
+{
+  "artemis_data_root": "",
+  "default_database_id": "",
+  "frequency_tolerance_hz": 100000,
+  "bandwidth_tolerance_hz": 100000,
+  "maximum_results": 20,
+  "mcp_transport": "stdio",
+  "mcp_host": "127.0.0.1",
+  "mcp_port": 8765,
+  "allow_external_database_paths": false
+}
